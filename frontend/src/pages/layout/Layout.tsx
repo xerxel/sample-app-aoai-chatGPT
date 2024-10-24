@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import { VersionInfo } from '../../components/common/VersionInfo'
 import { Dialog, Stack, TextField } from '@fluentui/react'
 import { CopyRegular } from '@fluentui/react-icons'
 
@@ -95,6 +96,7 @@ const Layout = () => {
         </Stack>
       </header>
       <Outlet />
+      <VersionInfo />
       <Dialog
         onDismiss={handleSharePanelDismiss}
         hidden={!isSharePanelOpen}
